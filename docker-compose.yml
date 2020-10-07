@@ -1,0 +1,9 @@
+swagger-ui:
+    image: swaggerapi/swagger-ui
+    ports:
+        - 80:8080
+    volumes:
+        - ./docs:/usr/share/nginx/html/docs
+        - ./docs:/docs
+    environment:
+        SWAGGER_JSON: /docs/openapi.yaml
